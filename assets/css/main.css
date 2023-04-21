@@ -1,0 +1,652 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins";
+  font-size: 1.6rem;
+}
+
+/* =======START HEADER ========*/
+.header {
+  height: 100vh;
+  background-color: #e6f0ff;
+  position: relative;
+}
+/* start nav */
+.navbar {
+  display: flex;
+  align-items: center;
+  padding-top: 38px;
+}
+
+.navbar ul {
+  /* dùng display: inline-block cho thẻ li, trình duyệt sẽ tính cả khoảng 
+    space ở giữa 2 phần tử, do đó nên dùng cách này */
+  display: flex;
+
+  /* margin cách logo 50px với 14px padding của thẻ a -> tổng 64px*/
+  margin-left: 50px;
+}
+
+.navbar ul li a {
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: #4f5361;
+  padding: 8px 14px;
+}
+
+.navbar ul li a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+/* start action */
+.action {
+  /* đẩy phần tử kịch qua lề trái  */
+  margin-left: auto;
+}
+
+.action .action-link {
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--primary-color);
+}
+
+.action-btn {
+  padding: 13px 16px;
+  margin-left: 18px;
+  border-radius: 8px;
+  /* transition: .2s linear; */
+}
+
+.action-btn:hover {
+  scale: 1.1;
+}
+/* end action */
+
+/* end nav */
+
+/* start main-header */
+.hero {
+  margin-top: 130px;
+}
+
+.hero .infor {
+  width: 50.3%;
+}
+
+.hero .sub-title {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  /* identical to box height */
+
+  letter-spacing: 0.01em;
+  color: #687691;
+}
+
+.hero .title {
+  margin-top: 8px;
+  font-weight: 700;
+  font-size: 6.3rem;
+  line-height: 1.19;
+  /* or 119% */
+  color: var(--title-color);
+}
+
+.hero .desc {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 1.78;
+  /* or 178% */
+  color: #5a6473;
+  margin-top: 30px;
+}
+
+.hero .hero-cta {
+  min-width: 170px;
+  margin-top: 40px;
+}
+
+.hero-img {
+  position: absolute;
+  bottom: 0;
+  /* ảnh sẽ luôn có mép sát với mép của content
+    100vw-content-width = độ dư 2 bên; /2 sẽ ra độ dư 1 bên -> cách right một
+    khoảng bằng độ dư 1 bên sẽ đảm bảo phần tủ sát mép content */
+  right: calc((100vw - var(--content-width)) / 2 - 100px);
+  /* trừ đi 100px để cho phần tử lùi ra ngoài content 100px */
+  /* ==> đảm bảo sau này kích thước màn hình thay đổi, ảnh sẽ luôn tỉ lệ với content */
+}
+/* end main-header */
+
+/* ======= END HEADER =======*/
+
+/* ======== START CLIENTS =======*/
+.clients {
+  margin-top: 133px;
+  padding-top: 43px;
+  padding-bottom: 66px;
+  margin-top: 79px;
+}
+
+.clients .desc {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  color: #7d8589;
+}
+
+.clients .row-desc {
+  margin-top: 23px;
+}
+
+.clients .image {
+  margin-top: 96px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ======== END CLIENTS =======*/
+
+/* ======== START GUIDE =======*/
+.guides {
+  margin-top: 200px;
+  margin-top: 40px;
+  padding-top: 93px;
+  padding-bottom: 79px;
+}
+
+.guides .sub-title {
+  font-weight: 600;
+  font-size: 3.5rem;
+  line-height: 1;
+  text-align: center;
+  color: var(--title-color);
+  position: relative;
+}
+
+.guides .sub-title::before {
+  content: "";
+  display: inline-block;
+  width: 41px;
+  height: 4px;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #000339;
+  border-radius: 12px;
+}
+
+.guides .desc {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.88;
+  /* or 188% */
+  text-align: center;
+  color: #5a6473;
+  /* màn hình kthuoc đủ rộng sẽ hiển thị 100%, không thì sẽ co lại. Nếu fix cứng 459px 
+  đối với màn hình kích thước nhỏ phần tử sẽ giữ nguyên 459px gây vỡ layout*/
+  width: 459px;
+  max-width: 100%;
+
+  margin: 20px auto 0;
+}
+
+/* list-guide */
+.list-guide {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+.guide-item {
+  margin: 0 70px;
+  text-align: center;
+}
+
+.guide-item .title {
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1.1;
+  /* identical to box height, or 110% */
+  color: #3b3c45;
+  margin-top: 26px;
+}
+
+.guide-item .link {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1.4rem;
+  /* identical to box height */
+  color: #0689ff;
+  margin-top: 10px;
+}
+
+.guide-item .arrow {
+  margin-left: 6px;
+}
+
+/* guide-call to action */
+.guide-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.guide-cta .btn {
+  min-width: 170px;
+}
+/* ======== END GUIDE =======*/
+
+/* ======== START FEATURED =======*/
+.featured {
+  background: #f5fafe;
+  margin-top: 41px;
+  padding: 110px 0;
+}
+
+.featured .sub-title {
+  font-weight: 600;
+  font-size: 3.5rem;
+  line-height: 1;
+  /* identical to box height, or 100% */
+  color: var(--title-color);
+}
+
+.featured .desc {
+  margin-top: 15px;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.88;
+  /* identical to box height, or 188% */
+  color: #5a6473;
+}
+
+.featured .link {
+  font-weight: 600;
+  font-size: 1.8rem;
+  /* identical to box height */
+  color: #0689ff;
+  display: flex;
+  align-items: center;
+}
+
+.featured .link .arrow {
+  margin-left: 8px;
+}
+
+/* featured-list */
+.featured .list {
+  margin-top: 70px;
+  display: flex;
+  gap: 30px;
+}
+
+.featured .item {
+  /* các item có kích thước như nhau */
+  flex: 1;
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+.featured .item .thumb {
+  width: 100%;
+  height: 227px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.featured .body {
+  padding: 17px 20px 24px;
+}
+
+.featured .title a {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 1.5;
+  /* identical to box height, or 100% */
+  color: var(--title-color);
+}
+
+.featured .desc {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  /* identical to box height */
+  color: #a3a6ab;
+  margin: 11px 0 21px;
+  /* phòng khi nhập từ dài vượt chiều ngang gây tràn ra ngoài */
+  word-break: break-all;
+}
+
+.featured .item .infor {
+  display: flex;
+  align-items: center;
+}
+
+.featured .item .label {
+  font-weight: 500;
+  font-size: 1.4rem;
+  /* identical to box height, or 100% */
+  letter-spacing: 0.01em;
+  color: #4d4d52;
+  margin-left: 8px;
+}
+
+.featured .item .icon {
+  margin-left: 23px;
+}
+
+.featured .item .icon::first-child {
+  margin-left: 0;
+}
+
+/* ======== END FEATURED =======*/
+
+/* ======== START STATISTIC =======*/
+
+.statistic {
+  margin-top: 75px;
+  padding: 50px 0;
+  background: #fff;
+}
+
+.statistic .row {
+  align-items: flex-start;
+}
+
+.statistic .content {
+  width: 1048px;
+}
+
+.statistic .img-block,
+.statistic .infor {
+  width: 50%;
+}
+
+.statistic .img-block .image {
+  width: 400px;
+  height: 460px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  margin-left: auto;
+}
+
+.statistic .infor {
+  padding-top: 79px;
+  padding-left: 165px;
+  padding-right: 23px;
+  padding-bottom: 69px;
+  padding: 79px 23px 69px 165px;
+}
+
+.statistic .sub-title {
+  font-weight: 600;
+  font-size: 3.5rem;
+  line-height: 1.29;
+  /* or 129% */
+  color: var(--title-color);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.statistic .sub-title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 41px;
+  height: 4px;
+  background: var(--title-color);
+  border-radius: 12px;
+  left: 0;
+  top: -10px;
+}
+
+.statistic .infor .desc {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.88;
+  /* or 188% */
+
+  color: #5a6473;
+}
+
+.statistic .img-block {
+  position: relative;
+}
+
+.statistic .statis-trend {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 239px;
+  background: #ffffff;
+  box-shadow: 90px 85px 100px rgba(0, 0, 0, 0.06);
+  border-radius: 0px 0px 12px 12px;
+  padding: 45px 22px 40px;
+}
+
+.statistic .statis-trend .value {
+  font-weight: 700;
+  font-size: 2.6rem;
+  line-height: 1;
+  /* identical to box height, or 100% */
+  letter-spacing: 0.01em;
+  color: var(--title-color);
+}
+
+.statistic .statis-trend .desc {
+  font-weight: 400;
+  font-size: 1.2rem;
+  /* or 150% */
+  color: #a7a7a7;
+  margin-top: 8px;
+}
+
+.statistic .statis-trend .icon {
+  margin-left: auto;
+}
+
+.statistic .statis-trend .separate {
+  height: 1.2px;
+  background: #e9e9e9;
+  margin-top: 25px;
+}
+
+/* avatar */
+.avatar-block {
+  margin-top: 26px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 14px;
+}
+
+.avatar-block .avatar-group {
+  display: flex;
+}
+
+.avatar-block .avatar-group .avatar {
+  width: 16px;
+  height: 16px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-left: -3px;
+}
+
+.statistic .avatar:first-child {
+  margin-left: 3px;
+}
+
+/* quanity */
+.row-qty {
+  margin-top: 110px;
+  justify-content: space-between;
+  padding: 0 32px;
+}
+
+.qty-item .qty {
+  font-weight: 600;
+  font-size: 6.4rem;
+  line-height: 1;
+  /* identical to box height, or 100% */
+  color: #000000;
+}
+
+.qty-item .qty-desc {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  /* identical to box height */
+  color: #7b8087;
+  margin-top: 22px;
+}
+
+/* ======== END STATISTIC =======*/
+
+/* ======== START SUBSCRIPTION =======*/
+.subscription {
+  margin-top: 90px;
+}
+
+.subscription .body {
+  height: 370px;
+  background: #063183;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.subscription .body .infor {
+  padding-left: 80px;
+  padding-right: 90px;
+  width: 671px;
+  max-width: 100%;
+}
+
+.subscription .body .infor .sub-title {
+  font-weight: 600;
+  font-size: 3.5rem;
+  line-height: 1;
+  /* identical to box height, or 100% */
+  color: #ffffff;
+}
+
+.subscription .body .infor .desc {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.88;
+  /* identical to box height, or 188% */
+  color: #ffffff;
+  opacity: 0.75;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.subscription .body .infor .btn-subscribe {
+  padding: 14px 42px 16px;
+  background-color: #fff;
+  color: #002366;
+}
+
+.subscription .body .image {
+  position: absolute;
+  bottom: 0;
+  right: 221px;
+}
+/* ======== END SUBSCRIPTION =======*/
+
+/* ======== START FOOTER =======*/
+.footer {
+  margin-top: 55px;
+  padding-top: 50px;
+  padding-bottom: 58px;
+}
+
+.footer .row {
+  align-items: flex-start;
+}
+.footer .row-top {
+  gap: 185px;
+}
+
+.footer .columns .list {
+  display: inline-block;
+}
+
+.footer .columns .heading {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.2;
+  /* identical to box height */
+  color: #1c1c1d;
+}
+
+.footer .columns .list,
+.footer .columns .desc {
+  margin-top: 42px;
+}
+
+.footer .columns .list .item {
+  margin-bottom: 18px;
+}
+
+.footer .columns .desc {
+  margin-bottom: 40px;
+}
+
+.footer .columns .list .item:last-child {
+  margin-bottom: 0;
+}
+
+.footer .columns .list .item a,
+.footer .columns .desc {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  /* identical to box height */
+  color: #7a7a7e;
+  white-space: nowrap;
+}
+
+.footer .columns .desc {
+  white-space: normal;
+  line-height: 1.75;
+}
+
+/* social media */
+.footer .social {
+  display: flex;
+  gap: 16px;
+}
+
+.footer .social .social-link {
+  width: 28px;
+  height: 28px;
+}
+
+/* copy right */
+.footer .row-bottom {
+  align-items: center;
+  margin-top: 81px;
+}
+
+.footer .row-bottom .copyright {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  /* identical to box height */
+  color: #c2c2c2;
+}
+
+/* ======== END FOOTER =======*/
