@@ -1,4 +1,11 @@
-git push -u origin main
+update code into github
+
+    git add . (add tất cả thay đổi)
+    git commit -m"tiêu đề về sự thay đổi"
+    git push -u origin main (push lên main)
 
 
-push code
+    ctrl+shift+r: tải lại trang = xóa bộ đệm
+    Do trình duyệt đã lưu file css html trước đó vào độ đệm. Lên nó sẽ tải
+    trực tiếp file đó lên. Do đó sau khi update code, xóa độ đệm và tải lại trang
+    
