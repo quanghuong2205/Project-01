@@ -20,13 +20,6 @@ body {
   z-index: 1;
 }
 
-.helo-wrap {
-  height: 100vh;
-  background-color: #e6f0ff;
-  position: relative;
-  /* loại bỏ margin collaption */
-  display: flex;
-}
 /* start nav */
 .navbar {
   display: flex;
@@ -52,7 +45,7 @@ body {
 
 .navbar ul li a:hover {
   text-decoration: underline;
-  color: white;
+  color: black;
 }
 
 /* start action */
@@ -81,7 +74,20 @@ body {
 
 /* end nav */
 
-/* start main-header */
+/* END HEADER */
+
+/* START HERO */
+.helo-wrap {
+  /* phần header-gồm navbar cao 90px, do đó cần trừ đi 90px tương ứng để đảm bảo phần hero + header=100vh
+  khi đó hero sẽ không bị tụt xuống dưới */
+  height: calc(100vh - 90px);
+
+  background-color: #e6f0ff;
+  position: relative;
+  /* loại bỏ margin collaption */
+  display: flex;
+}
+
 .hero {
   margin-top: 130px;
 }
@@ -133,9 +139,9 @@ body {
   /* trừ đi 100px để cho phần tử lùi ra ngoài content 100px */
   /* ==> đảm bảo sau này kích thước màn hình thay đổi, ảnh sẽ luôn tỉ lệ với content */
 }
-/* end main-header */
+/* end hero */
 
-/* ======= END HEADER =======*/
+/* ======= END HERO =======*/
 
 /* ======== START CLIENTS =======*/
 .clients {
