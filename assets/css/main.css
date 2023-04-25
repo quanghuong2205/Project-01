@@ -2,8 +2,12 @@
   box-sizing: border-box;
 }
 
-html {
+html{
   font-size: 62.5%;
+}
+
+html, body {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -28,6 +32,7 @@ body {
 }
 
 .navbar ul {
+
   /* dùng display: inline-block cho thẻ li, trình duyệt sẽ tính cả khoảng 
     space ở giữa 2 phần tử, do đó nên dùng cách này */
   display: flex;
@@ -86,6 +91,10 @@ body {
   position: relative;
   /* loại bỏ margin collaption */
   display: flex;
+  /* đảm bảo luôn căn giữa. DÙng flex-direction la column, do đó trục main quay dọc, do đó
+  cần dùng justify content để căn theo chiều dọc*/
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero {
